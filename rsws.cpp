@@ -27,8 +27,9 @@ int ranking(struct vector<int>& marks,int n){
   return 0;
 }
 
+
 int main(){
-  vector<vector<int>> marks{ { 301, 72},{ 302, 56 },{ 303, 94 } };// 2d-vector created 
+  vector<vector<int>> marks{ {20301, 72},{20302, 56 },{20303, 94 } };// 2d-vector created 
   int n=marks.size();
   ranking(marks,n); 
   //error  reference of type "std::vector<int, std::allocator<int>> &" (not const-qualified) cannot be initialized with a value of type "std::vector<std::vector<int, std::allocator<int>>, std::allocator<std::vector<int, std::allocator<int>>>>"C/C++(434)
