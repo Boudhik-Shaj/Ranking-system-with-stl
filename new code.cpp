@@ -4,7 +4,7 @@
 #include <vector>
 using namespace std;
 struct Student {
-  int name;
+  int rollno;
   int score;
 };
 
@@ -14,18 +14,19 @@ bool compareStudents(const Student &s1, const Student &s2) {
 
 int main() {
   vector<Student> students = {
-        {301,10},
-        {302,20},
-        {303,15},
-        {304,25}
+        {20301,10},
+        {20302,20},
+        {20303,15},
+        {20304,25}
  };
 
   sort(students.begin(), students.end(), compareStudents);
   cout<<"_______________________________"<<endl;
   cout<<"| Rank  |  RollNo.  |  Score  |"<<endl;
+  cout<<"-------------------------------"<<endl;
   int rank = 1;
   for (const auto &student : students) {
-    cout <<"|   "<< rank << "   |    " << student.name << "    |   " << student.score <<   "    |"<<endl; 
+    cout <<"|   "<< rank << "   |   " << student.rollno << "   |   " << student.score <<   "    |"<<endl; 
     rank++;
   }
 cout<<"_______________________________"<<endl;
