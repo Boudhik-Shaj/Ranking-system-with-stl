@@ -6,7 +6,7 @@
 #include <map>
 #include <iterator>
 using namespace std;
-// #include <typeinfo>
+#include <typeinfo>
 
 void read(){
   ifstream fin;
@@ -16,19 +16,13 @@ void read(){
   if(fin.fail()){
     cerr<<"Cannot open file"<<endl;
   }
-  string temp;
-  while (getline(fin,temp,',')){
+  string temp,word;
+  while (getline(fin,temp),","){
     
+    //cout<<typeid(temp).name()<<endl;
     
-    // cout<<typeid(temp).name()<<endl;
-    int num;
-    while (temp>>num)
-    {
-      cout<<num<<endl;
-    }
-    
-    // cout<<temp<<endl;
-    // int cmpt=stoi(temp);
+    cout<<temp<<endl;
+    //int cmpt=stoi(temp);
     // if(cmpt>100){
     //   rollno=cmpt;
     //   cout<<rollno<<endl;
