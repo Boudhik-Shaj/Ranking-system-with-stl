@@ -2,6 +2,7 @@
 #include <string>
 #include <iostream>
 #include <algorithm>
+#include <vector>
 using namespace std;
 struct Student {
   string name;
@@ -27,12 +28,14 @@ int main() {
   }
 
   sort(students.begin(), students.end(), compareStudents);
-
+  cout<<"_______________________________"<<endl;
+  cout<<"| Rank  |  RollNo.  |  Score  |"<<endl;
   int rank = 1;
   for (const auto &student : students) {
-    cout << rank << ". " << student.name << ": " << student.score << '\n';
+    cout <<"|   "<< rank << "   |    " << student.name << "    |   " << student.score <<   "   |"<<endl; 
     rank++;
   }
+cout<<"_______________________________"<<endl;
   
   return 0;
 }
