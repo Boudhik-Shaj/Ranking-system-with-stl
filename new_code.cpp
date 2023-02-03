@@ -50,14 +50,16 @@ int main() {
   }
 cout<<"___________________________________________________________________"<<endl;
 int checkRoll;
-cout<<"Do you want get grade for specific student?\nEnter rollno. : "<<endl;
+cout<<"Do you want get grade for specific student?\nEnter rollno. : ";
 cin>>checkRoll;
+rank=1;
 for (const auto &student : students) {
     if(student.rollno==checkRoll){
-         cout << student.rollno << "   |   "<<student.sem1<<"    |    "<<student.sem2<<"  |   "<<student.sem3<<"    |    " << student.CGPA <<   "    |    "<< grade(student.CGPA)<<"   |"<<endl;
+        cout <<"\nStudent Rollno: "<< student.rollno << "\nSemester 1    : "<<student.sem1<<"\nSemester 2    : "<<student.sem2<<"\nSemester 3    : "<<student.sem3<<"\nCGPA          : " << student.CGPA <<"\nGrade         : "<< grade(student.CGPA)<<"\nRank          : "<<rank<<endl;
         
     }
     else if(student.rollno!=checkRoll){
+      rank++;
         continue;
     }
     else{
